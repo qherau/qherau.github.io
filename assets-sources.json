@@ -1,0 +1,150 @@
+[
+  {
+    "file": "assets/spectral-original.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/5772016415301528777_1400_000_1420_000/original.jpg",
+    "sha256": "5dd1a8e265f605e79a61fc957e8d9be7363b80462f08d45add2c767a623fd466",
+    "size_bytes": 53852
+  },
+  {
+    "file": "assets/spectral-appearance-1.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/5772016415301528777_1400_000_1420_000/ref_8679184381783013073_7740_000_7760_000.jpg",
+    "sha256": "f3c0e8536a8237d062188de86a5ffda2dd32a8641e32bd90d7d5335b938c3ee5",
+    "size_bytes": 40115
+  },
+  {
+    "file": "assets/spectral-reference-1.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/references/8679184381783013073_7740_000_7760_000.jpg",
+    "sha256": "c8159e50e0295683d43da4870eaa5b1ae5c2adbee036562bc8286cb97322b7c2",
+    "size_bytes": 51882
+  },
+  {
+    "file": "assets/spectral-appearance-2.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/5772016415301528777_1400_000_1420_000/ref_13982731384839979987_1680_000_1700_000.jpg",
+    "sha256": "9c72aed0f923d2da465ad0565f11bb39371d01b837881c368f25f716f7968642",
+    "size_bytes": 34089
+  },
+  {
+    "file": "assets/spectral-reference-2.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/references/13982731384839979987_1680_000_1700_000.jpg",
+    "sha256": "5adfb33501e3e347efa2cac9d1967c5f076b3268b05e98c1c917c8203e8a6d8a",
+    "size_bytes": 40189
+  },
+  {
+    "file": "assets/spectral-appearance-3.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/5772016415301528777_1400_000_1420_000/ref_15021599536622641101_556_150_576_150.jpg",
+    "sha256": "0631a8b2176e3fc812fdb737e8ce5c4c7eec2fa750a379d35d981fe44176b8ee",
+    "size_bytes": 25947
+  },
+  {
+    "file": "assets/spectral-reference-3.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/references/15021599536622641101_556_150_576_150.jpg",
+    "sha256": "5b933385ff5291c839ab14919670fabaa4ef0da9c6a74999f644a686475259f4",
+    "size_bytes": 25022
+  },
+  {
+    "file": "assets/spectral-appearance-4.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/5772016415301528777_1400_000_1420_000/ref_16767575238225610271_5185_000_5205_000.jpg",
+    "sha256": "bbe29220fd909a7623df37769600a5815297be3943db6948fafe753a38648fca",
+    "size_bytes": 42884
+  },
+  {
+    "file": "assets/spectral-reference-4.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/references/16767575238225610271_5185_000_5205_000.jpg",
+    "sha256": "1e45399bd9d1103ff4d384d2caeb341cdf169d17162cf778626fdb1b5bcc6b14",
+    "size_bytes": 41722
+  },
+  {
+    "file": "assets/spectral-appearance-5.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/5772016415301528777_1400_000_1420_000/ref_17703234244970638241_220_000_240_000.jpg",
+    "sha256": "65603c9700b5553917d52074aa55b58063207f68cf733d8a75d2e54162f38400",
+    "size_bytes": 41123
+  },
+  {
+    "file": "assets/spectral-reference-5.jpg",
+    "source_url": "https://arxiv.org/html/2604.03462v1/imgs/style_grid/references/17703234244970638241_220_000_240_000.jpg",
+    "sha256": "d6af32bda9236f51928b6c7cf18e2e52678b3af7f8d2e2f1ee924bf0b5d2a179",
+    "size_bytes": 39504
+  },
+  {
+    "file": "assets/uniquer-teaser.png",
+    "source_url": "https://uniquer3d.github.io/static/imgs/teaser1.png",
+    "sha256": "0b50d046d07bfca4b7a6b6299ba255dbca848e213c6085865d8da53c60533041",
+    "size_bytes": 4565077
+  },
+  {
+    "file": "assets/urope-teaser.jpg",
+    "source_url": "https://urope-pe.github.io/static/imgs/teaser.jpg",
+    "sha256": "a56a9b392141560f0b617e01c28c889b37f9c803bd28a37f02f5d054837790a0",
+    "size_bytes": 1776741
+  },
+  {
+    "file": "assets/lfg-teaser.png",
+    "source_url": "https://lfg-ai.github.io/static/images/teaser_new-1.png",
+    "sha256": "0b78172f936e68e2c90c2beb4e3162bf06893724a6090e0d2842e65707525633",
+    "size_bytes": 1572468
+  },
+  {
+    "file": "assets/moisst-teaser.png",
+    "source_url": "https://qherau.github.io/MOISST/resources/teaser.png",
+    "copied_from": "MOISST/resources/teaser.png",
+    "sha256": "cdb0f51fa5ce7373624022b79c3496f5f0a99faf0dad7759be08d9a6212dd3cf",
+    "size_bytes": 301076
+  },
+  {
+    "file": "assets/soac-teaser.png",
+    "source_url": "https://qherau.github.io/SOAC/resources/teaser.png",
+    "copied_from": "SOAC/resources/teaser.png",
+    "sha256": "b8cbd2a74369f59a6b74669757fbef20a61261f1c1f41d3a4553148b42c5f0c6",
+    "size_bytes": 75425
+  },
+  {
+    "file": "assets/gs-method.png",
+    "source_url": "https://qherau.github.io/3DGS-Calib/resources/method_diagram.png",
+    "copied_from": "3DGS-Calib/resources/method_diagram.png",
+    "sha256": "29ae75e287e68dd34c139a55b01d9b24d9ecaf7b40a977e643b6b97c8f83cb71",
+    "size_bytes": 415645
+  },
+  {
+    "file": "assets/avoptim-teaser.JPG",
+    "source_url": "https://qherau.github.io/AVoptim/static/images/teaser.JPG",
+    "copied_from": "AVoptim/static/images/teaser.JPG",
+    "sha256": "fd1cb3b76706572922c9f08e6628e3d407c5c378e0303420e768dec62f43cd7a",
+    "size_bytes": 114124
+  },
+  {
+    "file": "assets/remind-teaser.png",
+    "source_url": "https://arxiv.org/html/2605.25333v1/graph-gen-teaser-6.png",
+    "sha256": "d2c9b7c2ea5819d7c246502964a216a8b136c99358e72feb16b05950ebd0364f",
+    "size_bytes": 1606217
+  },
+  {
+    "file": "assets/strike-teaser.png",
+    "source_url": "https://arxiv.org/html/2610.09514v1/teaser-v6.png",
+    "sha256": "b6ec6eac723c88c83d7f17a02047ca7b3937e50692f31d9ddf1a63136038226c",
+    "size_bytes": 472556
+  },
+  {
+    "file": "assets/s2tok-teaser.jpg",
+    "source_url": "https://arxiv.org/html/2610.08978v1/img/teasor_v4.jpg",
+    "sha256": "3f4fe72abd3952d614a4cb041d22b9fe8280f3c1679858548cbdef2ce14b6866",
+    "size_bytes": 1842179
+  },
+  {
+    "file": "assets/building-rome-teaser.jpg",
+    "source_url": "https://build-rome.github.io/assets/media/teaser_poster.jpg",
+    "sha256": "63517c6c772fca2253648d8f60ccc7f08ef0d6b79fa8a0e466ed476a88067f47",
+    "size_bytes": 178577
+  },
+  {
+    "file": "assets/quentin-herau-cvpr.jpg",
+    "source": "User-supplied 12256.jpg, selected for the personal website portrait",
+    "sha256": "f220674a2a968431393a52bc53147a531527b32897e5f82389315a5a3856ada0",
+    "size_bytes": 178721,
+    "dimensions": [
+      1280,
+      1226
+    ],
+    "original_bytes_preserved": true,
+    "display": "CSS responsive framing; no image retouching"
+  }
+]
