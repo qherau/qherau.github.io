@@ -44,7 +44,7 @@ def link(url, label, cls=''):
 def site_switcher():
     entries=[('Personal page','https://qherau.github.io/','../Personal/')]+[(name,f'https://qherau.github.io/{name}/',f'../{name}/') for name in ['MOISST','SOAC','3DGS-Calib','AVoptim']]
     links=''.join(f'<a href="{url}" data-preview-path="{preview}"'+(' aria-current="page"' if label=='Personal page' else '')+f'>{label}</a>' for label,url,preview in entries)
-    return '<details class="site-switcher" data-site-switcher><summary>Research websites</summary><nav class="site-options" aria-label="Research websites">'+links+'</nav></details>'
+    return '<details class="site-switcher" data-site-switcher><summary>Projects</summary><nav class="site-options" aria-label="Projects">'+links+'</nav></details>'
 
 
 def authors(names):
