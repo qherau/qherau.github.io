@@ -18,7 +18,8 @@
     "description": "Predict scene changes through learned visual state transitions, then generate the intervening video.",
     "image": "strike-teaser.png",
     "alt": "Published STRIKE comparison: a robotic gripper attaches to a cube before lifting it, using learned visual transitions.",
-    "paper": "https://arxiv.org/abs/2610.09514"
+    "paper": "https://arxiv.org/abs/2610.09514",
+    "project": "https://strike-applied.github.io/"
   },
   {
     "name": "S2Tok",
