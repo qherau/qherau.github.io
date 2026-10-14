@@ -9,6 +9,35 @@ ROOT = Path(__file__).resolve().parent
 SITE = ROOT if (ROOT / 'assets').is_dir() else ROOT / 'Personal'
 STYLE_VERSION = hashlib.sha256((SITE / 'assets/personal.css').read_bytes()).hexdigest()[:12]
 SCHOLAR = 'https://scholar.google.com/citations?user=dxHTZAkAAAAJ&hl=en'
+SITE_URL = 'https://qherau.github.io/'
+PAGE_TITLE = 'Quentin Herau | 3D Vision & Neural Rendering'
+PAGE_DESCRIPTION = 'Quentin Herau, Research Engineer at Applied Intuition. Publications on 3D reconstruction, neural rendering, world models and camera–LiDAR calibration.'
+PORTRAIT_URL = SITE_URL + 'assets/quentin-herau-cvpr.jpg'
+PROFILE_LINKS = [SCHOLAR, 'https://github.com/qherau', 'https://www.linkedin.com/in/quentin-herau-phd-38378b140']
+STRUCTURED_DATA = {
+    '@context': 'https://schema.org',
+    '@graph': [
+        {
+            '@type': 'WebSite', '@id': SITE_URL + '#website',
+            'url': SITE_URL, 'name': 'Quentin Herau', 'inLanguage': 'en',
+            'author': {'@id': SITE_URL + '#person'},
+        },
+        {
+            '@type': 'ProfilePage', '@id': SITE_URL + '#profile',
+            'url': SITE_URL, 'name': PAGE_TITLE, 'description': PAGE_DESCRIPTION,
+            'inLanguage': 'en', 'isPartOf': {'@id': SITE_URL + '#website'},
+            'mainEntity': {'@id': SITE_URL + '#person'},
+        },
+        {
+            '@type': 'Person', '@id': SITE_URL + '#person',
+            'name': 'Quentin Herau', 'url': SITE_URL, 'image': PORTRAIT_URL,
+            'jobTitle': 'Research Engineer',
+            'worksFor': {'@type': 'Organization', 'name': 'Applied Intuition', 'url': 'https://www.appliedintuition.com/'},
+            'knowsAbout': ['3D reconstruction', 'Neural rendering', 'World models', 'Camera–LiDAR calibration', 'Autonomous driving', 'Robotics'],
+            'sameAs': PROFILE_LINKS,
+        },
+    ],
+}
 BASE = ['Quentin Herau', 'Nathan Piasco', 'Moussab Bennehar', 'Luis Roldão', 'Dzmitry Tsishkou', 'Cyrille Migniot', 'Pascal Vasseur', 'Cédric Demonceaux']
 PAPERS = [
  dict(name='STRIKE', year=2026, venue='Preprint · 2026', topic='worlds', title='STRIKE: Learning Visual State Transitions for Physical World Modeling', authors=['Wenbin Teng','Tianshuo Xu','Depu Meng','Yuelei Li','Quentin Herau','Yihan Hu','Yajie Zhao','Wei Zhan'], description='Predict scene changes through learned visual state transitions, then generate the intervening video.', image='strike-teaser.png', alt='Published STRIKE comparison: a robotic gripper attaches to a cube before lifting it, using learned visual transitions.', paper='https://arxiv.org/abs/2610.09514', project='https://strike-applied.github.io/'),
@@ -39,7 +68,8 @@ def link(url, label, cls=''):
     preview=''
     for name in ['MOISST','SOAC','3DGS-Calib','AVoptim']:
         if url==f'https://qherau.github.io/{name}/':preview=f' data-preview-path="../{name}/"'
-    return f'<a class="{cls}" href="{escape(url, quote=True)}"{preview}>{label}</a>'
+    identity = ' rel="me"' if url in PROFILE_LINKS else ''
+    return f'<a class="{cls}" href="{escape(url, quote=True)}"{preview}{identity}>{label}</a>'
 
 def site_switcher():
     entries=[('Personal page','https://qherau.github.io/','../Personal/')]+[(name,f'https://qherau.github.io/{name}/',f'../{name}/') for name in ['MOISST','SOAC','3DGS-Calib','AVoptim']]
@@ -73,8 +103,30 @@ SCRIPT_VERSION = hashlib.sha256((SITE/'assets/personal.js').read_bytes()).hexdig
 
 html = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Quentin Herau — Research</title><meta name="description" content="Quentin Herau, Research Engineer at Applied Intuition. Research in 3D reconstruction, neural rendering, world models and sensor calibration.">
-<meta name="theme-color" content="#fafaf7"><meta property="og:title" content="Quentin Herau — Research"><meta property="og:description" content="3D reconstruction, neural rendering, world models and multi-sensor calibration."><meta property="og:type" content="website"><link rel="canonical" href="https://qherau.github.io/"><meta property="og:url" content="https://qherau.github.io/"><meta property="og:image" content="https://qherau.github.io/assets/quentin-herau-cvpr.jpg">
+<title>{escape(PAGE_TITLE)}</title>
+<meta name="description" content="{escape(PAGE_DESCRIPTION, quote=True)}">
+<meta name="author" content="Quentin Herau">
+<meta name="robots" content="max-image-preview:large">
+<meta name="theme-color" content="#fafaf7">
+<link rel="canonical" href="{SITE_URL}">
+<meta property="og:title" content="{escape(PAGE_TITLE, quote=True)}">
+<meta property="og:description" content="{escape(PAGE_DESCRIPTION, quote=True)}">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Quentin Herau">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="{SITE_URL}">
+<meta property="profile:first_name" content="Quentin">
+<meta property="profile:last_name" content="Herau">
+<meta property="og:image" content="{PORTRAIT_URL}">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="1226">
+<meta property="og:image:alt" content="Quentin Herau standing beside the CVPR sign.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{escape(PAGE_TITLE, quote=True)}">
+<meta name="twitter:description" content="{escape(PAGE_DESCRIPTION, quote=True)}">
+<meta name="twitter:image" content="{PORTRAIT_URL}">
+<meta name="twitter:image:alt" content="Quentin Herau standing beside the CVPR sign.">
+<script type="application/ld+json">{json.dumps(STRUCTURED_DATA, ensure_ascii=False, indent=2)}</script>
 <link rel="icon" href="data:,"><link rel="stylesheet" href="assets/personal.css?v={STYLE_VERSION}"><script src="assets/personal.js?v={SCRIPT_VERSION}" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="wrap nav" aria-label="Main navigation"><div class="nav-start"><a class="brand" href="#top">Quentin Herau</a>{site_switcher()}</div><button class="menu-button" type="button" data-menu aria-controls="nav-links" aria-expanded="false">Menu</button><div class="nav-links" id="nav-links"><a href="#top">About</a><a href="#publications">Publications</a><a href="#background">Service</a><a href="mailto:quentin.herau@gmail.com">Contact</a></div></nav></header>
